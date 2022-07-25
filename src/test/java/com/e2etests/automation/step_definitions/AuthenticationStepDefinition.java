@@ -4,13 +4,9 @@ import org.junit.Assert;
 
 import com.e2etests.automation.page_objects.AuthenticationPage;
 
-
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
-
 
 public class AuthenticationStepDefinition {
 
@@ -20,9 +16,9 @@ public class AuthenticationStepDefinition {
 		this.authenticationPage = new AuthenticationPage();
 	}
 
+	/*Login */
 	@Given("Je me connecte a l'application OrangeHRM")
 	public void jeMeConnecteALApplicationOrangeHRM() {
-		/*Setup.driver.get("https://opensource-demo.orangehrmlive.com/");*/
 		authenticationPage.goToURL();
 	}
 
@@ -36,7 +32,7 @@ public class AuthenticationStepDefinition {
 		authenticationPage.fillPassword(password);
 	}
 
-	@When("Je clique sur le buton login")
+	@When("Je clique sur le bouton login")
 	public void jeCliqueSurLeButonLogin() {
 		authenticationPage.clickOnbtnLogin();
 	}
@@ -46,5 +42,19 @@ public class AuthenticationStepDefinition {
 		String message = AuthenticationPage.homePage.getText();
 		Assert.assertTrue(message.contains(msg));
 	}
+	/*Logout*/
+
+	@When("Je clique sur l icone logout")
+	public void jeCliqueSurLIconeLogout() {
+		authenticationPage.clickOniconLogout();
+	}
+	@When("Je clique sur le bouton logout")
+	public void jeCliqueSurLeBoutonLogout() throws InterruptedException {
+		Thread.sleep(2000);
+		authenticationPage.clickOnbtnLogout();
+	}
+
+
+
 
 }

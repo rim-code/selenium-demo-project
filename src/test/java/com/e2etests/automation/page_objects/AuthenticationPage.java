@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import com.e2etests.automation.utils.ConfigFileReader;
 import com.e2etests.automation.utils.Setup;
 
+import io.cucumber.java.en.When;
+
 public class AuthenticationPage {
 	
 	private ConfigFileReader configFileReader;
@@ -24,6 +26,9 @@ public class AuthenticationPage {
 	  
 	  @FindBy(how = How.ID, using = "welcome")
 	  public static WebElement homePage;
+	  
+	  @FindBy(how = How.XPATH, using = "//*[contains(text(),'Logout')]")
+	  public static WebElement btnLogout ;
 	  
 	  public AuthenticationPage() {
 		  PageFactory.initElements(Setup.driver, this);
@@ -45,6 +50,14 @@ public class AuthenticationPage {
 	  public void goToURL() {
 		 Setup.driver.get(configFileReader.getProperties("home.url"));
 	  }
+	  
+	  public void clickOniconLogout() {
+		    homePage.click();
+		}
+		
+		public void clickOnbtnLogout() {
+			btnLogout.click();
+		}
 	  
 	  
 	  
