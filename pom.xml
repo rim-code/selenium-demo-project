@@ -37,7 +37,6 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>${selenium.version}</version>
     </dependency>
 
     <dependency>
@@ -124,4 +123,13 @@
       </plugins>
     </pluginManagement>
   </build>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>org.seleniumhq.selenium</groupId>
+  			<artifactId>selenium-java</artifactId>
+  			<version>${selenium.version}</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>
