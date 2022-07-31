@@ -5,12 +5,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import com.e2etests.automation.utils.BasePage;
 import com.e2etests.automation.utils.ConfigFileReader;
 import com.e2etests.automation.utils.Setup;
 
 import io.cucumber.java.en.When;
 
-public class AuthenticationPage {
+public class AuthenticationPage  {
 	
 	private ConfigFileReader configFileReader;
 	
@@ -37,7 +38,7 @@ public class AuthenticationPage {
 	  
 	  /* Create methods */
 	  public void fillUsername(String txt_username) {
-		  username.sendKeys(txt_username);
+		  username.sendKeys(txt_username);  
 	  }
 	  
 	  public void fillPassword(String txt_password) {
@@ -49,6 +50,7 @@ public class AuthenticationPage {
 	  
 	  public void goToURL() {
 		 Setup.driver.get(configFileReader.getProperties("home.url"));
+		
 	  }
 	  
 	  public void clickOniconLogout() {
