@@ -14,7 +14,9 @@ public class AuthenticationStepDefinition {
 
 	private AuthenticationPage authenticationPage;
      static Logger logger = Logger.getLogger(AuthenticationStepDefinition.class);
-
+     
+// create constructor 
+     
 	public AuthenticationStepDefinition() {
 		this.authenticationPage = new AuthenticationPage();
 		PropertyConfigurator.configure("src/main/java/log4j.properties");
@@ -35,6 +37,7 @@ public class AuthenticationStepDefinition {
 
 	@When("Je saisie le mot de passe {string}")
 	public void jeSaisieLeMotDePasse(String password) {
+		authenticationPage.fillPassword(password);
 		logger.info("Je saisie le mot de passe");
 	}
 
@@ -60,8 +63,6 @@ public class AuthenticationStepDefinition {
 		Thread.sleep(2000);
 		authenticationPage.clickOnbtnLogout();
 	}
-
-
 
 
 }

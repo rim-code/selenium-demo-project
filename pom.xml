@@ -24,6 +24,7 @@
 		<testng.version>7.5</testng.version>
 		<commons.version>2.11.0</commons.version>
 		<apachepoi.version>3.13</apachepoi.version>
+		<pdf.version>1.8.1</pdf.version>
 	</properties>
 
 	<dependencies>
@@ -93,7 +94,11 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>${apachepoi.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>${pdf.version}</version>
+		</dependency>
 
 	</dependencies>
 

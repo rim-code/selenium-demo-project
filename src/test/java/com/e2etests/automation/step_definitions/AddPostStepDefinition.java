@@ -30,8 +30,8 @@ public class AddPostStepDefinition {
 	}
 
 	@Then("Je verifie laffichage de message {string}")
-	public void jeVerifieLaffichageDeMessage(String txt_likedPosts) {
-
+	public void jeVerifieLaffichageDeMessage(String myPost) {
+		Assert.assertEquals(addPostPage.findMypost(myPost), myPost);
 	}
 
 }

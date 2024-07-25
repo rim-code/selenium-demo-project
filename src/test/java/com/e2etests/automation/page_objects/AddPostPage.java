@@ -13,21 +13,26 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.e2etests.automation.utils.Setup;
 
 public class AddPostPage {
-	
 
 	/* @FindBy WebElement */
 	@FindBy(how = How.XPATH, using = "//*[contains(text(),'Logout')]")
 	public static WebElement btnLogout;
+	
 	@FindBy(how = How.ID, using = "menu_buzz_viewBuzz")
 	public static WebElement buzzModule;
+	
 	@FindBy(how = How.ID, using = "createPost_content")
 	public static WebElement postContent;
+	
 	@FindBy(how = How.ID, using = "postSubmitBtn")
 	public static WebElement btnPost;
+	
 	@FindBy(how = How.CLASS_NAME, using = "postContent")
 	public static List<WebElement> listPost;
+	
 	@FindBy(how = How.ID, using = "rightBarHeadingMl")
 	public static WebElement likedPosts;
+	
 	public AddPostPage() {
 		PageFactory.initElements(Setup.driver, this);
 

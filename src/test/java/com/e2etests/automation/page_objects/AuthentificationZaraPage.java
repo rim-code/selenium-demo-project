@@ -37,7 +37,6 @@ public class AuthentificationZaraPage {
 	
 	public void fillEmail(String mail) {
 		email.sendKeys(mail);
-
 	}
 	public void fillPassword(String txt_password) {
 		password.sendKeys(txt_password);
